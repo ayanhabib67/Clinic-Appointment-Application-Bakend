@@ -72,28 +72,6 @@ export let doctorControllers = async (request , response)=>{
 
 
 
-// export let   getDoctor = async (req, res) => {
-//   try {
-//     const { userId } = req.body; 
-
-//     console.log("User ID from frontend:", userId);
-
-//     const incomes = await UserModel.find({ userId });
-
-//     res.json({
-//       message: "Incomes fetched successfully",
-//       status: true,
-//       data: incomes,
-//     });
-//   } catch (error) {
-//     res.json({
-//       message: error.message,
-//       status: false,
-//     });
-//   }
-// }    convert karo all doctor without any nody  
-
-
 
 
 
@@ -122,7 +100,7 @@ export const getDoctor = async (req, res) => {
 
 export const getSingleDoctor = async (req, res) => {
   try {
-    const { id } = req.body; // receive doctor id from frontend
+    const { id } = req.body; 
 
     if (!id) {
       return res.status(400).json({

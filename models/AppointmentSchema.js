@@ -1,19 +1,17 @@
 import mongoose from "mongoose";
 
 const appointmentSchema = new mongoose.Schema({
-  // Links to user who booked
+  
   userId: {
     type: String,
-    // required: true,
+   
   },
-
-  // Doctor assigned
   doctorId: {
     type: String,
     required: true,
   },
 
-  // Doctor Details
+
   doctorName: {
     type: String,
     required: true,
@@ -27,14 +25,14 @@ const appointmentSchema = new mongoose.Schema({
   },
   doctorPhone: {
     type: String,
-    // required: true,
+    
   },
   doctorSpecialization: {
     type: String,
-    // required: true,
+    
   },
 
-  // Patient Details
+
   patientName: {
     type: String,
     required: true,
@@ -64,7 +62,7 @@ const appointmentSchema = new mongoose.Schema({
     required: true,
   },
 
-  // Medical Information
+  
   disease: {
     type: String,
     required: true,
@@ -85,7 +83,7 @@ const appointmentSchema = new mongoose.Schema({
     type: String,
   },
 
-  // Appointment Details
+  
   specialization: {
     type: String,
     required: true,
@@ -110,7 +108,6 @@ const appointmentSchema = new mongoose.Schema({
     type: String,
   },
 
-  // Backend tracking fields
   status: {
     type: String,
     enum: ["pending", "approved", "cancelled", "completed"],

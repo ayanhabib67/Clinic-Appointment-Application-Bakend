@@ -124,7 +124,7 @@ export let UserLoginController =async (request , response)=>{
 
 export const getRegisteredUser = async (req, res) => {
   try {
-    const { userId } = req.body; // Get userId from request body
+    const { userId } = req.body; 
 
     if (!userId) {
       return res.status(400).json({
